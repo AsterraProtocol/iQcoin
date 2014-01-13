@@ -1,14 +1,14 @@
-// Copyright (c) 2011-2013 The Bitcoin developers
+// Copyright (c) 2011-2013 The iQcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "bitcoin-config.h"
+#include "iQcoin-config.h"
 #endif
 
 #include "optionsmodel.h"
 
-#include "bitcoinunits.h"
+#include "iQcoinunits.h"
 #include "guiutil.h"
 
 #include "init.h"
@@ -49,7 +49,7 @@ void OptionsModel::Init()
 
     // Display
     if (!settings.contains("nDisplayUnit"))
-        settings.setValue("nDisplayUnit", BitcoinUnits::BTC);
+        settings.setValue("nDisplayUnit", iQcoinUnits::BTC);
     nDisplayUnit = settings.value("nDisplayUnit").toInt();
 
     if (!settings.contains("bDisplayAddresses"))

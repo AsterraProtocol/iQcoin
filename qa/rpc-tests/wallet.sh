@@ -8,8 +8,8 @@ if [ $# -lt 1 ]; then
         exit 1
 fi
 
-BITCOIND=${1}/bitcoind
-CLI=${1}/bitcoin-cli
+BITCOIND=${1}/iQcoind
+CLI=${1}/iQcoin-cli
 
 DIR="${BASH_SOURCE%/*}"
 SENDANDWAIT="${DIR}/send.sh"

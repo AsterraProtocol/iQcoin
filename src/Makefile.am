@@ -4,19 +4,19 @@ AM_CPPFLAGS += -I$(top_srcdir)/src/leveldb/helpers/memenv \
   -I$(builddir)
 
 noinst_LIBRARIES = \
-  libbitcoin_server.a \
-  libbitcoin_common.a \
-  libbitcoin_cli.a
+  libiQcoin_server.a \
+  libiQcoin_common.a \
+  libiQcoin_cli.a
 if ENABLE_WALLET
-noinst_LIBRARIES += libbitcoin_wallet.a
+noinst_LIBRARIES += libiQcoin_wallet.a
 endif
 
-bin_PROGRAMS = bitcoind bitcoin-cli
+bin_PROGRAMS = iQcoind iQcoin-cli
 
 SUBDIRS = . $(BUILD_QT) $(BUILD_TEST)
 DIST_SUBDIRS = . qt test
 .PHONY: FORCE
-# bitcoin core #
+# iQcoin core #
 BITCOIN_CORE_H = \
   addrman.h \
   alert.h \
@@ -79,7 +79,7 @@ obj/build.h: FORCE
 	  $(abs_top_srcdir)
 version.o: obj/build.h
 
-libbitcoin_server_a_SOURCES = \
+libiQcoin_server_a_SOURCES = \
   addrman.cpp \
   alert.cpp \
   rpcserver.cpp \
@@ -104,7 +104,7 @@ libbitcoin_server_a_SOURCES = \
   $(JSON_H) \
   $(BITCOIN_CORE_H)
 
-libbitcoin_wallet_a_SOURCES = \
+libiQcoin_wallet_a_SOURCES = \
   db.cpp \
   crypter.cpp \
   rpcdump.cpp \
@@ -113,7 +113,7 @@ libbitcoin_wallet_a_SOURCES = \
   walletdb.cpp \
   $(BITCOIN_CORE_H)
 
-libbitcoin_common_a_SOURCES = \
+libiQcoin_common_a_SOURCES = \
   allocators.cpp \
   chainparams.cpp \
   core.cpp \
@@ -128,43 +128,43 @@ libbitcoin_common_a_SOURCES = \
   version.cpp \
   $(BITCOIN_CORE_H)
 
-libbitcoin_cli_a_SOURCES = \
+libiQcoin_cli_a_SOURCES = \
   rpcclient.cpp \
   $(BITCOIN_CORE_H)
 
-nodist_libbitcoin_common_a_SOURCES = $(top_srcdir)/src/obj/build.h
+nodist_libiQcoin_common_a_SOURCES = $(top_srcdir)/src/obj/build.h
 #
 
-# bitcoind binary #
-bitcoind_LDADD = \
-  libbitcoin_server.a \
-  libbitcoin_cli.a \
-  libbitcoin_common.a \
+# iQcoind binary #
+iQcoind_LDADD = \
+  libiQcoin_server.a \
+  libiQcoin_cli.a \
+  libiQcoin_common.a \
   leveldb/libleveldb.a \
   leveldb/libmemenv.a
 if ENABLE_WALLET
-bitcoind_LDADD += libbitcoin_wallet.a
+iQcoind_LDADD += libiQcoin_wallet.a
 endif
-bitcoind_SOURCES = bitcoind.cpp
+iQcoind_SOURCES = iQcoind.cpp
 #
 
 if TARGET_WINDOWS
-bitcoind_SOURCES += bitcoind-res.rc
+iQcoind_SOURCES += iQcoind-res.rc
 endif
 
 AM_CPPFLAGS += $(BDB_CPPFLAGS)
-bitcoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS)
+iQcoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS)
 
-# bitcoin-cli binary #
-bitcoin_cli_LDADD = \
-  libbitcoin_cli.a \
-  libbitcoin_common.a \
+# iQcoin-cli binary #
+iQcoin_cli_LDADD = \
+  libiQcoin_cli.a \
+  libiQcoin_common.a \
   $(BOOST_LIBS)
-bitcoin_cli_SOURCES = bitcoin-cli.cpp
+iQcoin_cli_SOURCES = iQcoin-cli.cpp
 #
 
 if TARGET_WINDOWS
-bitcoin_cli_SOURCES += bitcoin-cli-res.rc
+iQcoin_cli_SOURCES += iQcoin-cli-res.rc
 endif
 
 leveldb/libleveldb.a: leveldb/libmemenv.a
@@ -174,7 +174,7 @@ leveldb/%.a:
 	  CC="$(CC)" PLATFORM=$(TARGET_OS) AR="$(AR)" $(LEVELDB_TARGET_FLAGS) \
 	  OPT="$(CXXFLAGS) $(CPPFLAGS)"
 
-qt/bitcoinstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_common_a_SOURCES) $(libbitcoin_cli_a_SOURCES)
+qt/iQcoinstrings.cpp: $(libiQcoin_server_a_SOURCES) $(libiQcoin_common_a_SOURCES) $(libiQcoin_cli_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	@cd $(top_srcdir); XGETTEXT=$(XGETTEXT) share/qt/extract_strings_qt.py
 

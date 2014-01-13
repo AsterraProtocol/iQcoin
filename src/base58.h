@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2013 The Bitcoin developers
+// Copyright (c) 2009-2013 The iQcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -253,40 +253,40 @@ public:
     bool operator> (const CBase58Data& b58) const { return CompareTo(b58) >  0; }
 };
 
-/** base58-encoded Bitcoin addresses.
+/** base58-encoded iQcoin addresses.
  * Public-key-hash-addresses have version 0 (or 111 testnet).
  * The data vector contains RIPEMD160(SHA256(pubkey)), where pubkey is the serialized public key.
  * Script-hash-addresses have version 5 (or 196 testnet).
  * The data vector contains RIPEMD160(SHA256(cscript)), where cscript is the serialized redemption script.
  */
-class CBitcoinAddress;
-class CBitcoinAddressVisitor : public boost::static_visitor<bool>
+class CiQcoinAddress;
+class CiQcoinAddressVisitor : public boost::static_visitor<bool>
 {
 private:
-    CBitcoinAddress *addr;
+    CiQcoinAddress *addr;
 public:
-    CBitcoinAddressVisitor(CBitcoinAddress *addrIn) : addr(addrIn) { }
+    CiQcoinAddressVisitor(CiQcoinAddress *addrIn) : addr(addrIn) { }
     bool operator()(const CKeyID &id) const;
     bool operator()(const CScriptID &id) const;
     bool operator()(const CNoDestination &no) const;
 };
 
-class CBitcoinAddress : public CBase58Data
+class CiQcoinAddress : public CBase58Data
 {
 public:
     bool Set(const CKeyID &id) {
-        SetData(Params().Base58Prefix(CChainParams::PUBKEY_ADDRESS), &id, 20);
+        SetData(Params().Base58Prefix(CChainParams::PUBKEY_ADDRESS), &id, 41);
         return true;
     }
 
     bool Set(const CScriptID &id) {
-        SetData(Params().Base58Prefix(CChainParams::SCRIPT_ADDRESS), &id, 20);
+        SetData(Params().Base58Prefix(CChainParams::SCRIPT_ADDRESS), &id, 41);
         return true;
     }
 
     bool Set(const CTxDestination &dest)
     {
-        return boost::apply_visitor(CBitcoinAddressVisitor(this), dest);
+        return boost::apply_visitor(CiQcoinAddressVisitor(this), dest);
     }
 
     bool IsValid() const
@@ -297,21 +297,21 @@ public:
         return fCorrectSize && fKnownVersion;
     }
 
-    CBitcoinAddress()
+    CiQcoinAddress()
     {
     }
 
-    CBitcoinAddress(const CTxDestination &dest)
+    CiQcoinAddress(const CTxDestination &dest)
     {
         Set(dest);
     }
 
-    CBitcoinAddress(const std::string& strAddress)
+    CiQcoinAddress(const std::string& strAddress)
     {
         SetString(strAddress);
     }
 
-    CBitcoinAddress(const char* pszAddress)
+    CiQcoinAddress(const char* pszAddress)
     {
         SetString(pszAddress);
     }
@@ -343,12 +343,12 @@ public:
     }
 };
 
-bool inline CBitcoinAddressVisitor::operator()(const CKeyID &id) const         { return addr->Set(id); }
-bool inline CBitcoinAddressVisitor::operator()(const CScriptID &id) const      { return addr->Set(id); }
-bool inline CBitcoinAddressVisitor::operator()(const CNoDestination &id) const { return false; }
+bool inline CiQcoinAddressVisitor::operator()(const CKeyID &id) const         { return addr->Set(id); }
+bool inline CiQcoinAddressVisitor::operator()(const CScriptID &id) const      { return addr->Set(id); }
+bool inline CiQcoinAddressVisitor::operator()(const CNoDestination &id) const { return false; }
 
 /** A base58-encoded secret key */
-class CBitcoinSecret : public CBase58Data
+class CiQcoinSecret : public CBase58Data
 {
 public:
     void SetKey(const CKey& vchSecret)
@@ -383,18 +383,18 @@ public:
         return SetString(strSecret.c_str());
     }
 
-    CBitcoinSecret(const CKey& vchSecret)
+    CiQcoinSecret(const CKey& vchSecret)
     {
         SetKey(vchSecret);
     }
 
-    CBitcoinSecret()
+    CiQcoinSecret()
     {
     }
 };
 
 
-template<typename K, int Size, CChainParams::Base58Type Type> class CBitcoinExtKeyBase : public CBase58Data
+template<typename K, int Size, CChainParams::Base58Type Type> class CiQcoinExtKeyBase : public CBase58Data
 {
 public:
     void SetKey(const K &key) {
@@ -409,14 +409,14 @@ public:
         return ret;
     }
 
-    CBitcoinExtKeyBase(const K &key) {
+    CiQcoinExtKeyBase(const K &key) {
         SetKey(key);
     }
 
-    CBitcoinExtKeyBase() {}
+    CiQcoinExtKeyBase() {}
 };
 
-typedef CBitcoinExtKeyBase<CExtKey, 74, CChainParams::EXT_SECRET_KEY> CBitcoinExtKey;
-typedef CBitcoinExtKeyBase<CExtPubKey, 74, CChainParams::EXT_PUBLIC_KEY> CBitcoinExtPubKey;
+typedef CiQcoinExtKeyBase<CExtKey, 74, CChainParams::EXT_SECRET_KEY> CiQcoinExtKey;
+typedef CiQcoinExtKeyBase<CExtPubKey, 74, CChainParams::EXT_PUBLIC_KEY> CiQcoinExtPubKey;
 
 #endif // BITCOIN_BASE58_H

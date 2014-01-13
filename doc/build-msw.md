@@ -72,12 +72,12 @@ MSYS shell:
 	mkdir miniupnpc
 	cp *.h miniupnpc/
 
-Bitcoin
+iQcoin
 -------
 MSYS shell:
 
-	cd \bitcoin
+	cd \iQcoin
 	sh autogen.sh
 	sh configure
 	mingw32-make
-	strip bitcoind.exe
+	strip iQcoind.exe

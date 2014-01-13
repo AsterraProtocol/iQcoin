@@ -1,0 +1,6 @@
+iQcoin-qt usr/bin
+share/pixmaps/iQcoin32.xpm usr/share/pixmaps
+share/pixmaps/iQcoin16.xpm usr/share/pixmaps
+share/pixmaps/iQcoin128.png usr/share/pixmaps
+debian/iQcoin-qt.desktop usr/share/applications
+debian/iQcoin-qt.protocol usr/share/kde4/services/

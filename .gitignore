@@ -1,11 +1,11 @@
 *.tar.gz
 
 *.exe
-src/bitcoin
-src/bitcoind
-src/bitcoin-cli
-src/test/test_bitcoin
-src/qt/test/test_bitcoin-qt
+src/iQcoin
+src/iQcoind
+src/iQcoin-cli
+src/test/test_iQcoin
+src/qt/test/test_iQcoin-qt
 
 Makefile.in
 aclocal.m4
@@ -13,8 +13,8 @@ autom4te.cache/
 config.log
 config.status
 configure
-src/bitcoin-config.h
-src/bitcoin-config.h.in
+src/iQcoin-config.h
+src/iQcoin-config.h.in
 src/build-aux/
 src/stamp-h1
 share/setup.nsi
@@ -35,7 +35,7 @@ src/qt/test/moc*.cpp
 *.orig
 *.o
 *.patch
-.bitcoin
+.iQcoin
 *.a
 *.pb.cc
 *.pb.h
@@ -50,12 +50,12 @@ src/qt/test/moc*.cpp
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-bitcoin-qt
-Bitcoin-Qt.app
+iQcoin-qt
+iQcoin-Qt.app
 
 # Unit-tests
 Makefile.test
-bitcoin-qt_test
+iQcoin-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -70,7 +70,7 @@ build
 #lcov
 *.gcno
 /*.info
-test_bitcoin.coverage/
+test_iQcoin.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -78,7 +78,7 @@ coverage_percent.txt
 linux-coverage-build
 linux-build
 win32-build
-qa/pull-tester/run-bitcoind-for-test.sh
+qa/pull-tester/run-iQcoind-for-test.sh
 qa/pull-tester/build-tests.sh
 
 !src/leveldb-*/Makefile

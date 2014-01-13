@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2013 The Bitcoin developers
+// Copyright (c) 2009-2013 The iQcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -908,7 +908,7 @@ void CWalletTx::RelayWalletTransaction()
 {
     BOOST_FOREACH(const CMerkleTx& tx, vtxPrev)
     {
-        // Important: versions of bitcoin before 0.8.6 had a bug that inserted
+        // Important: versions of iQcoin before 0.8.6 had a bug that inserted
         // empty transactions into the vtxPrev, which will cause the node to be
         // banned when retransmitted, hence the check for !tx.vin.empty()
         if (!tx.IsCoinBase() && !tx.vin.empty())
@@ -1283,7 +1283,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64_t> >& vecSend,
                 // The following if statement should be removed once enough miners
                 // have upgraded to the 0.9 GetMinFee() rules. Until then, this avoids
                 // creating free transactions that have change outputs less than
-                // CENT bitcoins.
+                // CENT iQcoins.
                 if (nFeeRet < CTransaction::nMinTxFee && nChange > 0 && nChange < CENT)
                 {
                     int64_t nMoveToFee = min(nChange, CTransaction::nMinTxFee - nFeeRet);
@@ -1295,7 +1295,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64_t> >& vecSend,
                 {
                     // Fill a vout to ourself
                     // TODO: pass in scriptChange instead of reservekey so
-                    // change transaction isn't always pay-to-bitcoin-address
+                    // change transaction isn't always pay-to-iQcoin-address
                     CScript scriptChange;
 
                     // coin control: send change to custom address
@@ -1479,7 +1479,7 @@ string CWallet::SendMoneyToDestination(const CTxDestination& address, int64_t nV
     if (nValue + nTransactionFee > GetBalance())
         return _("Insufficient funds");
 
-    // Parse Bitcoin address
+    // Parse iQcoin address
     CScript scriptPubKey;
     scriptPubKey.SetDestination(address);
 
@@ -1527,9 +1527,9 @@ bool CWallet::SetAddressBook(const CTxDestination& address, const string& strNam
             (mi == mapAddressBook.end()) ?  CT_NEW : CT_UPDATED);
     if (!fFileBacked)
         return false;
-    if (!strPurpose.empty() && !CWalletDB(strWalletFile).WritePurpose(CBitcoinAddress(address).ToString(), strPurpose))
+    if (!strPurpose.empty() && !CWalletDB(strWalletFile).WritePurpose(CiQcoinAddress(address).ToString(), strPurpose))
         return false;
-    return CWalletDB(strWalletFile).WriteName(CBitcoinAddress(address).ToString(), strName);
+    return CWalletDB(strWalletFile).WriteName(CiQcoinAddress(address).ToString(), strName);
 }
 
 bool CWallet::DelAddressBook(const CTxDestination& address)
@@ -1539,8 +1539,8 @@ bool CWallet::DelAddressBook(const CTxDestination& address)
     NotifyAddressBookChanged(this, address, "", ::IsMine(*this, address), "", CT_DELETED);
     if (!fFileBacked)
         return false;
-    CWalletDB(strWalletFile).ErasePurpose(CBitcoinAddress(address).ToString());
-    return CWalletDB(strWalletFile).EraseName(CBitcoinAddress(address).ToString());
+    CWalletDB(strWalletFile).ErasePurpose(CiQcoinAddress(address).ToString());
+    return CWalletDB(strWalletFile).EraseName(CiQcoinAddress(address).ToString());
 }
 
 bool CWallet::SetDefaultKey(const CPubKey &vchPubKey)

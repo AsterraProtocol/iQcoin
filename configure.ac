@@ -6,7 +6,7 @@ define(_CLIENT_VERSION_REVISION, 99)
 define(_CLIENT_VERSION_BUILD, 0)
 define(_CLIENT_VERSION_IS_RELEASE, false)
 define(_COPYRIGHT_YEAR, 2013)
-AC_INIT([Bitcoin],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[info@bitcoin.org],[bitcoin])
+AC_INIT([iQcoin],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[info@iQcoin.org],[iQcoin])
 AC_CONFIG_AUX_DIR([src/build-aux])
 AC_CONFIG_MACRO_DIR([src/m4])
 AC_CANONICAL_HOST
@@ -106,7 +106,7 @@ AC_ARG_WITH([protoc-bindir],[AS_HELP_STRING([--with-protoc-bindir=BIN_DIR],[spec
 
 
 AC_CONFIG_SRCDIR([src])
-AC_CONFIG_HEADERS([src/bitcoin-config.h])
+AC_CONFIG_HEADERS([src/iQcoin-config.h])
 
 dnl Checks for programs.
 AC_PROG_CXX
@@ -255,7 +255,7 @@ dnl Check for pthread compile/link requirements
 AX_PTHREAD
 INCLUDES="$INCLUDES $PTHREAD_CFLAGS"
 
-# The following macro will add the necessary defines to bitcoin-config.h, but
+# The following macro will add the necessary defines to iQcoin-config.h, but
 # they also need to be passed down to any subprojects. Pull the results out of
 # the cache and add them to CPPFLAGS.
 AC_SYS_LARGEFILE
@@ -434,7 +434,7 @@ fi
 
 BITCOIN_QT_PATH_PROGS([PROTOC], [protoc],$protoc_bin_path)
 
-dnl sets $bitcoin_enable_qt, $bitcoin_enable_qt_test, $bitcoin_enable_qt_dbus
+dnl sets $iQcoin_enable_qt, $iQcoin_enable_qt_test, $iQcoin_enable_qt_dbus
 BITCOIN_QT_CONFIGURE([$use_pkgconfig], [qt4])
 
 
@@ -531,14 +531,14 @@ else
 fi
 
 dnl these are only used when qt is enabled
-if test x$bitcoin_enable_qt != xno; then
+if test x$iQcoin_enable_qt != xno; then
   BUILD_QT=qt
   dnl enable dbus support
   AC_MSG_CHECKING([if dbus should be enabled])
-  if test x$bitcoin_enable_qt_dbus != xno; then
+  if test x$iQcoin_enable_qt_dbus != xno; then
     AC_DEFINE([USE_DBUS],[1],[Define if dbus support should be compiled in])
   fi
-  AC_MSG_RESULT($bitcoin_enable_qt_dbus)
+  AC_MSG_RESULT($iQcoin_enable_qt_dbus)
 
   dnl enable qr support
   AC_MSG_CHECKING([if qr should be enabled])
@@ -563,7 +563,7 @@ if test x$bitcoin_enable_qt != xno; then
 
   if test x$use_tests = xyes; then
     BUILD_TEST_QT="test"
-    if test x$bitcoin_enable_qt_test != xyes; then
+    if test x$iQcoin_enable_qt_test != xyes; then
       AC_MSG_ERROR("QT Test lib not found. Use --disable-tests or --without-qt.")
     fi
   fi
@@ -606,6 +606,6 @@ AC_SUBST(BUILD_TEST)
 AC_SUBST(BUILD_QT)
 AC_SUBST(BUILD_TEST_QT)
 AC_CONFIG_FILES([Makefile src/Makefile src/test/Makefile src/qt/Makefile src/qt/test/Makefile share/setup.nsi share/qt/Info.plist])
-AC_CONFIG_FILES([qa/pull-tester/run-bitcoind-for-test.sh],[chmod +x qa/pull-tester/run-bitcoind-for-test.sh])
+AC_CONFIG_FILES([qa/pull-tester/run-iQcoind-for-test.sh],[chmod +x qa/pull-tester/run-iQcoind-for-test.sh])
 AC_CONFIG_FILES([qa/pull-tester/build-tests.sh],[chmod +x qa/pull-tester/build-tests.sh])
 AC_OUTPUT

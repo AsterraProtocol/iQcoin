@@ -1652,8 +1652,8 @@ Adreso: %4
     </message>
     <message>
         <location line="+10"/>
-        <source>123.456 BTC</source>
-        <translation>123,456 BTC</translation>
+        <source>123.456 IQC</source>
+        <translation>123,456 IQC</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -2636,8 +2636,8 @@ Adreso: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>Aŭskulti al &lt;port&gt; por JSON-RPC-konektoj (defaŭlte: 8332 aŭ testnet: 18332)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
+        <translation>Aŭskulti al &lt;port&gt; por JSON-RPC-konektoj (defaŭlte: 55883 aŭ testnet: 45883)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -2731,7 +2731,7 @@ ekzemple: alertnotify=echo %%s | mail -s &quot;Averto de Bitmono&quot; admin@foo
     </message>
     <message>
         <location line="+6"/>
-        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
+        <source>This is a Beta version</source>
         <translation>Tiu ĉi estas antaŭeldona testa versio - uzu laŭ via propra risko - ne uzu por minado aŭ por aplikaĵoj por vendistoj</translation>
     </message>
     <message>
@@ -2786,8 +2786,8 @@ ekzemple: alertnotify=echo %%s | mail -s &quot;Averto de Bitmono&quot; admin@foo
     </message>
     <message>
         <location line="+2"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>Konekti al la JSON-RPC per &lt;port&gt; (defaŭlte: 8332 aŭ testnet: 18332)</translation>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
+        <translation>Konekti al la JSON-RPC per &lt;port&gt; (defaŭlte: 55883 aŭ testnet: 45883)</translation>
     </message>
     <message>
         <location line="+2"/>

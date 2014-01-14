@@ -3209,8 +3209,8 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>Attendi le connessioni JSON-RPC su &lt;porta&gt; (default: 8332 or testnet: 18332)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
+        <translation>Attendi le connessioni JSON-RPC su &lt;porta&gt; (default: 55883 or testnet: 45883)</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -3302,7 +3302,7 @@ per esempio: alertnotify=echo %%s | mail -s &quot;Allarme iQcoin&quot; admin@foo
     </message>
     <message>
         <location line="+18"/>
-        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
+        <source>This is a Beta version</source>
         <translation>Questa versione è una compilazione pre-rilascio - usala a tuo rischio - non utilizzarla per la generazione o per applicazioni di commercio</translation>
     </message>
     <message>
@@ -3377,8 +3377,8 @@ per esempio: alertnotify=echo %%s | mail -s &quot;Allarme iQcoin&quot; admin@foo
     </message>
     <message>
         <location line="+1"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>Connetti al JSON-RPC su &lt;port&gt; (default: 8332 o testnet: 18332)</translation>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
+        <translation>Connetti al JSON-RPC su &lt;port&gt; (default: 55883 o testnet: 45883)</translation>
     </message>
     <message>
         <location line="+2"/>

@@ -1651,8 +1651,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>123.456 BTC</source>
-        <translation>123,456 BTC</translation>
+        <source>123.456 IQC</source>
+        <translation>123,456 IQC</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -2635,8 +2635,8 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>Kuula JSON-RPC ühendusel seda porti &lt;port&gt; (vaikeväärtus: 8332 või testnet: 18332)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
+        <translation>Kuula JSON-RPC ühendusel seda porti &lt;port&gt; (vaikeväärtus: 55883 või testnet: 45883)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -2730,7 +2730,7 @@ nt: alertnotify=echo %%s | email -s &quot;iQcoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+6"/>
-        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
+        <source>This is a Beta version</source>
         <translation>See on test-versioon - kasutamine omal riisikol - ära kasuta mining&apos;uks ega kaupmeeste programmides</translation>
     </message>
     <message>
@@ -2785,7 +2785,7 @@ nt: alertnotify=echo %%s | email -s &quot;iQcoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+2"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
         <translation type="unfinished"/>
     </message>
     <message>

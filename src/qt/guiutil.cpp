@@ -127,7 +127,7 @@ bool parseiQcoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!iQcoinUnits::parse(iQcoinUnits::BTC, i->second, &rv.amount))
+                if(!iQcoinUnits::parse(iQcoinUnits::IQC, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -166,7 +166,7 @@ QString formatiQcoinURI(const SendCoinsRecipient &info)
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(iQcoinUnits::format(iQcoinUnits::BTC, info.amount));
+        ret += QString("?amount=%1").arg(iQcoinUnits::format(iQcoinUnits::IQC, info.amount));
         paramCount++;
     }
 

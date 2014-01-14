@@ -1653,8 +1653,8 @@ Adress: %4
     </message>
     <message>
         <location line="+10"/>
-        <source>123.456 BTC</source>
-        <translation>123,456 BTC</translation>
+        <source>123.456 IQC</source>
+        <translation>123,456 IQC</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -2637,8 +2637,8 @@ Adress: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>Lyssna på JSON-RPC-anslutningar på &lt;port&gt; (förvalt: 8332 eller testnet: 18332)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
+        <translation>Lyssna på JSON-RPC-anslutningar på &lt;port&gt; (förvalt: 55883 eller testnet: 45883)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -2732,7 +2732,7 @@ till exempel: alertnotify=echo %%s | mail -s &quot;iQcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+6"/>
-        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
+        <source>This is a Beta version</source>
         <translation>Detta är ett förhands testbygge - använd på egen risk - använd inte för mining eller handels applikationer</translation>
     </message>
     <message>
@@ -2787,7 +2787,7 @@ till exempel: alertnotify=echo %%s | mail -s &quot;iQcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+2"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
         <translation type="unfinished"/>
     </message>
     <message>

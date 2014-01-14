@@ -3200,8 +3200,8 @@ Address: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>האזן לחיבורי JSON-RPC ב- &lt;port&gt; (ברירת מחדל: 8332 או רשת בדיקה: 18332)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
+        <translation>האזן לחיבורי JSON-RPC ב- &lt;port&gt; (ברירת מחדל: 55883 או רשת בדיקה: 45883)</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -3290,7 +3290,7 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+18"/>
-        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
+        <source>This is a Beta version</source>
         <translation>זוהי בניית ניסיון טרום-שחרור - השימוש בה על אחריותך - אין להשתמש לצורך כריה או יישומי מסחר</translation>
     </message>
     <message>
@@ -3365,7 +3365,7 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+1"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
         <translation type="unfinished"/>
     </message>
     <message>

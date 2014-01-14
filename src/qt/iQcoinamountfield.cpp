@@ -159,7 +159,7 @@ void iQcoinAmountField::unitChanged(int idx)
     amount->setDecimals(iQcoinUnits::decimals(currentUnit));
     amount->setMaximum(qPow(10, iQcoinUnits::amountDigits(currentUnit)) - qPow(10, -amount->decimals()));
 
-    if (currentUnit == iQcoinUnits::uBTC)
+    if (currentUnit == iQcoinUnits::uIQC)
         amount->setSingleStep(0.01);
     else
         amount->setSingleStep(0.001);

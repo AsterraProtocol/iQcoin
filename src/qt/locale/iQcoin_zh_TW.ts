@@ -3203,8 +3203,8 @@ Address: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>在通訊埠 &lt;port&gt; 聽候 JSON-RPC 連線 (預設值: 8332, 或若是測試網路: 18332)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
+        <translation>在通訊埠 &lt;port&gt; 聽候 JSON-RPC 連線 (預設值: 55883, 或若是測試網路: 45883)</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -3294,7 +3294,7 @@ alertnotify=echo %%s | mail -s &quot;iQcoin Alert&quot; admin@foo.com</translati
     </message>
     <message>
         <location line="+18"/>
-        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
+        <source>This is a Beta version</source>
         <translation>這是個還沒發表的測試版本 - 使用請自負風險 - 請不要用於開採或商業應用</translation>
     </message>
     <message>
@@ -3369,8 +3369,8 @@ alertnotify=echo %%s | mail -s &quot;iQcoin Alert&quot; admin@foo.com</translati
     </message>
     <message>
         <location line="+1"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>連線到埠號 &lt;port&gt; 上的 JSON-RPC 伺服器 (預設值: 8332，或若是測試網路: 18332)</translation>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
+        <translation>連線到埠號 &lt;port&gt; 上的 JSON-RPC 伺服器 (預設值: 55883，或若是測試網路: 45883)</translation>
     </message>
     <message>
         <location line="+2"/>

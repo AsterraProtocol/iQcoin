@@ -1652,8 +1652,8 @@ Adres: %4
     </message>
     <message>
         <location line="+10"/>
-        <source>123.456 BTC</source>
-        <translation>123.456 BTC</translation>
+        <source>123.456 IQC</source>
+        <translation>123.456 IQC</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -2636,8 +2636,8 @@ Adres: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>JSON-RPC bağlantılarını &lt;port&gt; üzerinde dinle (varsayılan: 8332 veya tesnet: 18332)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
+        <translation>JSON-RPC bağlantılarını &lt;port&gt; üzerinde dinle (varsayılan: 55883 veya tesnet: 45883)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -2731,7 +2731,7 @@ mesela: alertnotify=echo %%s | mail -s &quot;iQcoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+6"/>
-        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
+        <source>This is a Beta version</source>
         <translation>Bu yayın öncesi bir deneme sürümüdür - tüm riski siz üstlenmiş olursunuz - iQcoin oluşturmak ya da ticari uygulamalar için kullanmayınız</translation>
     </message>
     <message>
@@ -2786,8 +2786,8 @@ mesela: alertnotify=echo %%s | mail -s &quot;iQcoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+2"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>&lt;port&gt; numarasında JSON-RPC&apos;ye bağlan (varsayılan: 8332 veya testnet: 18332)</translation>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
+        <translation>&lt;port&gt; numarasında JSON-RPC&apos;ye bağlan (varsayılan: 55883 veya testnet: 45883)</translation>
     </message>
     <message>
         <location line="+2"/>

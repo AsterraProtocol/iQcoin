@@ -1652,8 +1652,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+10"/>
-        <source>123.456 BTC</source>
-        <translation>123.456 BTC</translation>
+        <source>123.456 IQC</source>
+        <translation>123.456 IQC</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -2636,8 +2636,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>Čekat na JSON RPC spojení na &lt;portu&gt; (výchozí: 8332 nebo testnet: 18332)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
+        <translation>Čekat na JSON RPC spojení na &lt;portu&gt; (výchozí: 55883 nebo testnet: 45883)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -2731,7 +2731,7 @@ například: alertnotify=echo %%s | mail -s &quot;iQcoin Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+6"/>
-        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
+        <source>This is a Beta version</source>
         <translation>Tohle je testovací verze – používej ji jen na vlastní riziko, ale rozhodně ji nepoužívej k těžbě nebo pro obchodní aplikace</translation>
     </message>
     <message>
@@ -2786,7 +2786,7 @@ například: alertnotify=echo %%s | mail -s &quot;iQcoin Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+2"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
         <translation type="unfinished"/>
     </message>
     <message>

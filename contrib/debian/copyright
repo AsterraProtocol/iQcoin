@@ -1,6 +1,6 @@
 Format: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?rev=174
 Upstream-Name: iQcoin
-Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
+Upstream-Contact: iQcoin <satoshin@gmx.com>
  irc://#iQcoin@freenode.net
 Source: http://sourceforge.net/projects/iQcoin/files/
  https://github.com/iQcoin/iQcoin

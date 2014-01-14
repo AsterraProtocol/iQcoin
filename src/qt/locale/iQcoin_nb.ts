@@ -3202,8 +3202,8 @@ Adresse: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>Lytt etter JSON-RPC tilkoblinger på &lt;port&gt; (standardverdi: 8332 or testnet: 18332)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
+        <translation>Lytt etter JSON-RPC tilkoblinger på &lt;port&gt; (standardverdi: 55883 or testnet: 45883)</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -3291,7 +3291,7 @@ For eksempel: varselmelding=echo %%s | mail -s &quot;iQcoin varsel&quot; admin@f
     </message>
     <message>
         <location line="+18"/>
-        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
+        <source>This is a Beta version</source>
         <translation>Dette er en forhånds-sluppet test versjon - bruk på egen risiko - ikke for bruk av &quot;Mining&quot; (utvinning) eller markedsføring applikasjoner.</translation>
     </message>
     <message>
@@ -3366,8 +3366,8 @@ For eksempel: varselmelding=echo %%s | mail -s &quot;iQcoin varsel&quot; admin@f
     </message>
     <message>
         <location line="+1"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>Koble til JSON-RPC på &lt;port&gt; (default: 8332 eller testnet: 18332)</translation>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
+        <translation>Koble til JSON-RPC på &lt;port&gt; (default: 55883 eller testnet: 45883)</translation>
     </message>
     <message>
         <location line="+2"/>

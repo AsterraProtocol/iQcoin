@@ -15,9 +15,9 @@ iQcoinUnits::iQcoinUnits(QObject *parent):
 QList<iQcoinUnits::Unit> iQcoinUnits::availableUnits()
 {
     QList<iQcoinUnits::Unit> unitlist;
-    unitlist.append(BTC);
-    unitlist.append(mBTC);
-    unitlist.append(uBTC);
+    unitlist.append(IQC);
+    unitlist.append(mIQC);
+    unitlist.append(uIQC);
     return unitlist;
 }
 
@@ -25,9 +25,9 @@ bool iQcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case BTC:
-    case mBTC:
-    case uBTC:
+    case IQC:
+    case mIQC:
+    case uIQC:
         return true;
     default:
         return false;
@@ -38,9 +38,9 @@ QString iQcoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("BTC");
-    case mBTC: return QString("mBTC");
-    case uBTC: return QString::fromUtf8("μBTC");
+    case IQC: return QString("IQC");
+    case mIQC: return QString("mIQC");
+    case uIQC: return QString::fromUtf8("μIQC");
     default: return QString("???");
     }
 }
@@ -49,9 +49,9 @@ QString iQcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("iQcoins");
-    case mBTC: return QString("Milli-iQcoins (1 / 1,000)");
-    case uBTC: return QString("Micro-iQcoins (1 / 1,000,000)");
+    case IQC: return QString("iQcoins");
+    case mIQC: return QString("Milli-iQcoins (1 / 1,000)");
+    case uIQC: return QString("Micro-iQcoins (1 / 1,000,000)");
     default: return QString("???");
     }
 }
@@ -60,9 +60,9 @@ qint64 iQcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case BTC:  return 100000000;
-    case mBTC: return 100000;
-    case uBTC: return 100;
+    case IQC:  return 100000000;
+    case mIQC: return 100000;
+    case uIQC: return 100;
     default:   return 100000000;
     }
 }
@@ -71,9 +71,9 @@ qint64 iQcoinUnits::maxAmount(int unit)
 {
     switch(unit)
     {
-    case BTC:  return Q_INT64_C(21000000);
-    case mBTC: return Q_INT64_C(21000000000);
-    case uBTC: return Q_INT64_C(21000000000000);
+    case IQC:  return Q_INT64_C(21000000);
+    case mIQC: return Q_INT64_C(21000000000);
+    case uIQC: return Q_INT64_C(21000000000000);
     default:   return 0;
     }
 }
@@ -82,9 +82,9 @@ int iQcoinUnits::amountDigits(int unit)
 {
     switch(unit)
     {
-    case BTC: return 8; // 21,000,000 (# digits, without commas)
-    case mBTC: return 11; // 21,000,000,000
-    case uBTC: return 14; // 21,000,000,000,000
+    case IQC: return 8; // 21,000,000 (# digits, without commas)
+    case mIQC: return 11; // 21,000,000,000
+    case uIQC: return 14; // 21,000,000,000,000
     default: return 0;
     }
 }
@@ -93,9 +93,9 @@ int iQcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case BTC: return 8;
-    case mBTC: return 5;
-    case uBTC: return 2;
+    case IQC: return 8;
+    case mIQC: return 5;
+    case uIQC: return 2;
     default: return 0;
     }
 }

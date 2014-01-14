@@ -5,7 +5,7 @@ LINKCEIL="1gbit"
 #limit outbound iQcoin protocol traffic to this rate
 LIMIT="160kbit"
 #defines the address space for which you wish to disable rate limiting
-LOCALNET="192.168.0.0/16"
+LOCALNET="192.168.1.3/16"
 
 #delete existing rules
 tc qdisc del dev ${IF} root

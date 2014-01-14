@@ -1652,8 +1652,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+10"/>
-        <source>123.456 BTC</source>
-        <translation>123.456 BTC</translation>
+        <source>123.456 IQC</source>
+        <translation>123.456 IQC</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -2636,8 +2636,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>Escoitar conexións JSON-RPC no &lt;porto&gt; (por defecto: 8332 ou testnet: 18332)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
+        <translation>Escoitar conexións JSON-RPC no &lt;porto&gt; (por defecto: 55883 ou testnet: 45883)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -2731,7 +2731,7 @@ por exemplo: alertnotify=echo %%s | mail -s &quot;iQcoin Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+6"/>
-        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
+        <source>This is a Beta version</source>
         <translation>Esta é unha build de test pre-lanzamento - emprégaa baixo o teu propio risco - non empregar para minado ou aplicacións de comerciantes</translation>
     </message>
     <message>
@@ -2786,8 +2786,8 @@ por exemplo: alertnotify=echo %%s | mail -s &quot;iQcoin Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+2"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>Conectar a JSON-RPC no &lt;porto&gt; (por defecto: 8332 ou testnet: 18332)</translation>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 55883 or testnet: 45883)</source>
+        <translation>Conectar a JSON-RPC no &lt;porto&gt; (por defecto: 55883 ou testnet: 45883)</translation>
     </message>
     <message>
         <location line="+2"/>

@@ -49,7 +49,7 @@ void OptionsModel::Init()
 
     // Display
     if (!settings.contains("nDisplayUnit"))
-        settings.setValue("nDisplayUnit", iQcoinUnits::BTC);
+        settings.setValue("nDisplayUnit", iQcoinUnits::IQC);
     nDisplayUnit = settings.value("nDisplayUnit").toInt();
 
     if (!settings.contains("bDisplayAddresses"))

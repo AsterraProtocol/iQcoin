@@ -59,7 +59,7 @@ QT_TRANSLATE_NOOP("iQcoin-core", ""
 "Execute command when the best block changes (%s in cmd is replaced by block "
 "hash)"),
 QT_TRANSLATE_NOOP("iQcoin-core", ""
-"Listen for JSON-RPC connections on <port> (default: 8332 or testnet: 18332)"),
+"Listen for JSON-RPC connections on <port> (default: 55883 or testnet: 45883)"),
 QT_TRANSLATE_NOOP("iQcoin-core", ""
 "Number of seconds to keep misbehaving peers from reconnecting (default: "
 "86400)"),
@@ -71,7 +71,7 @@ QT_TRANSLATE_NOOP("iQcoin-core", ""
 "Set the number of script verification threads (up to 16, 0 = auto, <0 = "
 "leave that many cores free, default: 0)"),
 QT_TRANSLATE_NOOP("iQcoin-core", ""
-"This is a pre-release test build - use at your own risk - do not use for "
+"This is a Beta version"
 "mining or merchant applications"),
 QT_TRANSLATE_NOOP("iQcoin-core", ""
 "Unable to bind to %s on this computer. iQcoin is probably already running."),
@@ -118,7 +118,7 @@ QT_TRANSLATE_NOOP("iQcoin-core", "Cannot resolve -externalip address: '%s'"),
 QT_TRANSLATE_NOOP("iQcoin-core", "Cannot write default address"),
 QT_TRANSLATE_NOOP("iQcoin-core", "Connect only to the specified node(s)"),
 QT_TRANSLATE_NOOP("iQcoin-core", "Connect through SOCKS proxy"),
-QT_TRANSLATE_NOOP("iQcoin-core", "Connect to JSON-RPC on <port> (default: 8332 or testnet: 18332)"),
+QT_TRANSLATE_NOOP("iQcoin-core", "Connect to JSON-RPC on <port> (default: 55883 or testnet: 45883)"),
 QT_TRANSLATE_NOOP("iQcoin-core", "Connect to a node to retrieve peer addresses, and disconnect"),
 QT_TRANSLATE_NOOP("iQcoin-core", "Corrupted block database detected"),
 QT_TRANSLATE_NOOP("iQcoin-core", "Discover own IP address (default: 1 when listening and no -externalip)"),
